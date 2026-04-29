@@ -26,3 +26,15 @@ header{
     color: white;
    
 }
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+}
