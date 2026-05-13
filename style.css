@@ -1,5 +1,6 @@
 
-        body{ background-color:rgb(49, 49, 49);
+        body{ background: linear-gradient(to bottom, #0d4894, #000000);
+  min-height: 100vh;
         }
         
         h1{ color: rgb(255, 255, 255);
@@ -64,8 +65,36 @@
    width: 280px;
    height: 280px;
    border-radius: 50%;
-   border: 6px solid #ffffff;
    object-fit: cover;
-   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 10px 30px #000000 ;
 }
 
+.skill-bar {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; /* Space between each row */
+  align-items: flex end;
+  transform: translateY(-50px);
+  z-index: 10;
+}
+
+/* 2. The Item: Keeps icon and box side-by-side */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 3. The Name Box: Consistent white rectangles */
+.skill-name {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  width: 450px; /* Uniform width for the "straight" look */
+  padding: 25px 0;
+  text-align: center;
+  border: 2px;
+  font-weight: bold;
+  border-radius: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
