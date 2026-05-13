@@ -33,18 +33,39 @@
     display: inline-block;
 }
 
-.profile-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
+/*container fro the whole top section */
+
+.portfolio-my-skills{
+   display: flex;
+  align-items: center;
+  justify-content: center; /* Pulls the straight boxes and photo to the middle */
+  gap: 40px;               /* Adjust this to change distance between boxes and photo */
+  min-height: 100vh;
 }
+/* the wavy line*/
+.wavy-line{
+    position: absolute;
+  width: 600px; /* Make it wider to see the exaggeration */
+  height: 100%;
+  left: 50%; 
+  transform: translateX(-10%); /* This slides the wave left until it hits the photo */
+  z-index: 1;
+}
+
 .profile-container {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    padding-left: 50%;
-    gap: 100px;
-   margin-top: 100px;
-
+    text-align: center;
+    z-index: 10;
 }
+
+.profile-image{
+   width: 280px;
+   height: 280px;
+   border-radius: 50%;
+   border: 6px solid #ffffff;
+   object-fit: cover;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
