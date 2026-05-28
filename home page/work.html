@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="work.css"
+</head>
+<body>
+    <header class="main-header">
+        <div class="site-name"
+        <span class="name"><h1>Work</h1></span>
+    </div> 
+    <nav class="links-of-me">
+    <a href="home.html" class="loading-nav-link">
+        <span>home</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+
+    <a href="about_me.html" class="loading-nav-link">
+        <span>About me</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+
+    <a href="work.html" class="loading-nav-link">
+        <span>work</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+
+    <a href="contact.html" class="loading-nav-link">
+        <span>contact</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+</nav>
+    </header>
+
+   <main class="work-container">
+        
+        <!-- ====================================================
+             ROW 1: VOLUNTEER FOR RECYCLING
+             ==================================================== -->
+        <section class="work-row">
+            <div class="project-info">
+                <h2>volunteer for recycling org</h2>
+                <p>
+                    Description of your work with the recycling organization. Talk about the data tracks, 
+                    sustainability goals, or any assets you managed here.
+                </p>
+            </div>
+            <div class="project-media grid-two-columns">
+                <div class="media-box"><img src="../images/photo of me with the trashbag.jpeg" alt="Photo of the group"></div>
+            
+            </div>
+        </section>
+
+        <!-- ====================================================
+             ROW 2: GRAPHIC DESIGN (With Carousel)
+             ==================================================== -->
+        <section class="work-row">
+            <div class="project-info">
+                <h2>graphic design</h2>
+                <p>
+                    Using the Affinity 3 suite to build promotional art and layouts.
+                </p>
+                <!-- Your design sub-filters from the sketch -->
+                <div class="work-filters">
+                   <button class="filter-btn active" onclick="filterDesign('design-posters', this)">posters</button>
+    <button class="filter-btn" onclick="filterDesign('design-cards', this)">business cards</button>
+    <button class="filter-btn" onclick="filterDesign('design-others', this)">others</button>
+</div>
+            </div>
+            
+            <!-- Horizontal Carousel Window -->
+            <div class="project-media carousel-container">
+            <button class="carousel-arrow left-arrow" onclick="moveSlide(-1)">‹</button>
+            
+            <div class="carousel-track-wrapper">
+                <div id="carousel-track" class="carousel-track">
+                    <img src="../images/aura farmer dim.png" alt="Poster project" class="carousel-img">
+                    <img src="../images/re-re- unbothered.png" alt="Poster project" class="carousel-img">
+                    <img src="../images/this is gonna hurt tomorrow.png" alt="Poster project" class="carousel-img">
+                </div>
+
+                <div id="carousel-placeholder" class="placeholder-content" style="display: none;">
+                    <div class="placeholder-text">
+                        <h3 id="placeholder-title">business cards</h3>
+                        <p>project archiving in progress — coming soon</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-arrow right-arrow" onclick="moveSlide(1)">›</button>
+        </div>
+
+        <!-- ====================================================
+             ROW 3: MSSG PROJECT
+             ==================================================== -->
+        <section class="work-row">
+            <div class="project-info">
+                <h2>MSSG project</h2>
+                <p>
+                    Details regarding your MSSG group project timeline, database prototyping, 
+                    and development goals.
+                </p>
+            </div>
+            <div class="project-media">
+                <div class="media-box"><img src="../images/me during prototyping fair.jpeg" alt="Picture of us presenting our prototype"></div>
+               
+            </div>
+        </section>
+
+    </main>
+
+    
+    <script src="work.js"></script>
+    
+     <!--the wavy line-->
+    <!--<svg class="wavy-line" viewBox="0 0 500 1000" preserveAspectRatio="none">
+        <path
+        d="M200,-50 
+       C500,200 -100,400 200,500 
+       S500,800 200,1050" 
+    fill="none" 
+    stroke="#721d1b" 
+    stroke-width="85" 
+    stroke-linecap="round" />
+    </svg>-->
+    
+</body>
+</html>

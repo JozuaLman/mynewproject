@@ -1,0 +1,324 @@
+ body{  background-color: #0a0a0a;
+            background-image: url('../images/THE\ NEW\ BG.jpg');
+            background-repeat:no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+
+  
+        }
+        
+        h1{ color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        }
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(35, 35, 35, 0.1);
+    z-index: 999;
+    position:fixed;
+    width: 100%; 
+    box-sizing: border-box;
+     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.site-name .name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 15px;
+}
+.links-of-me a {
+    gap: 0px;
+    text-decoration: none;
+    color: white;
+    margin-left: 0px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.links-of-me a:hover{
+    transform: translateY(-5px);
+    display: inline-block;
+}
+
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* ADD THIS LINE */
+    padding-top: 140px; 
+    
+    /* These keep the side spacing consistent */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column; /* Stacks your title and paragraph */
+    max-width: 500px;
+    text-align: left; /* Keeps the text aligned like a book */
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.about-photo img {
+    width: 400px; /* Adjust based on your sketch's rectangle */
+    height: auto;
+    border-radius: 10px; /* Optional: adds a nice soft corner */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+  /* 1. THE LINK CONTAINER */
+.loading-nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 22px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+/* 2. THE SVG CANVAS OVERLAY */
+.border-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to go right through to the link text */
+}
+
+/* 3. THE RECTANGLE BORDER PROFILE */
+.border-rect {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: rgba(65, 109, 163, 0.8); /* Your loading line color */
+    stroke-width: 2px;
+    
+    /* The trick: Setting up a massive line dash pattern */
+    stroke-dasharray: 400; 
+    stroke-dashoffset: 400; /* Pushes the entire border out of sight by default */
+    
+    /* This creates the smooth, slow loading bar crawl effect */
+    transition: stroke-dashoffset 0.8s linear; 
+}
+
+/* 4. THE HOVER STATE: The perimeter slowly fills up */
+.loading-nav-link:hover .border-rect {
+    stroke-dashoffset: 0; /* Brings the outline tracing back into view */
+}
+
+/* Optional soft background glow while hovering */
+.loading-nav-link:hover {
+    color: #ffffff;
+    background-color: rgb(28, 48, 71);
+    border-radius: 20px;
+    transition: background-color 0.4s ease;
+}
+
+/* 5. THE ACTIVE CLICK STATE */
+.loading-nav-link:active {
+    transform: scale(0.95);
+    transition: transform 0.05s ease;
+}
+
+/* ==========================================================================
+   1. MAIN WORK CONTAINER
+   ========================================================================== */
+.work-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 40px 60px 40px; /* Kept safe below the main header nav */
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Generous vertical spacing between your main rows */
+}
+
+/* ==========================================================================
+   2. GRID STRUCTURE (Splits Info and Media Side-by-Side)
+   ========================================================================== */
+.work-row {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr; /* Info on the left, media on the right */
+    gap: 60px;
+    align-items: center;
+}
+
+.project-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+    color: #ffffff;
+}
+
+.project-info p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   3. DARK CARD OVERLAYS (Your Photo Layouts)
+   ========================================================================== */
+.grid-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splits into two columns for the group photos */
+    gap: 20px;
+}
+
+/* The Dark Card Container Wrapper */
+.media-box {
+    background-color: rgba(255, 255, 255, 0.03); /* Subtle clear card look */
+    border: 1px solid rgba(255, 255, 255, 0.08);   /* Fine perimeter line */
+    border-radius: 16px;                          /* Rounded corners matching About page */
+    padding: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.media-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps photos perfectly fitted without squeezing */
+    border-radius: 10px; /* Slightly tighter curves inside the card container */
+    display: block;
+}
+
+/* Soft hover lift animation */
+.media-box:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(61, 99, 149, 0.3); /* Soft hint of your header accent blue */
+}
+
+/* ==========================================================================
+   4. ROW 2 SPECIFIC: GRAPHIC DESIGN FILTERS
+   ========================================================================== */
+.work-filters {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: lowercase;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #3d6395; /* Accent blue fill */
+    border-color: #3d6395;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   5. HORIZONTAL CAROUSEL WINDOW (Slide Window for Posters)
+   ========================================================================== */
+.carousel-container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 390px;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden; /* Hides the extra images lined up outside the card view */
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out; /* Handles slide animation speed */
+}
+
+.carousel-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain; /* Prevents poster aspect ratios from cropping */
+    border-radius: 8px;
+    flex-shrink: 0; /* Keeps images full width inside the sliding window */
+}
+
+/* Left & Right Slide Buttons */
+.carousel-arrow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background: #3d6395;
+}
+
+.left-arrow { left: -20px; }
+.right-arrow { right: -20px; }
+
+/* ==========================================================================
+   DYNAMIC COMING SOON CONTENT (Swaps cleanly inside the frame)
+   ========================================================================== */
+.placeholder-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: cardFade 0.4s ease forwards; /* Quick, clean fade-in effect */
+}
+
+.placeholder-text h3 {
+    text-transform: lowercase;
+    color: #3d6395; /* Matches your signature accent blue */
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.placeholder-text p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Smooth fade animation for switching sub-tabs */
+@keyframes cardFade {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}

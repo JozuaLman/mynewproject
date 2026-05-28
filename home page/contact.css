@@ -1,0 +1,131 @@
+ body{  background-color: #0a0a0a;
+            background-image: url('../images/THE\ NEW\ BG.jpg');
+            background-repeat:no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+
+  
+        }
+        
+        h1{ color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        }
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(35, 35, 35, 0.1);
+    z-index: 999;
+    position:fixed;
+    width: 100%; 
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+  /* 1. THE LINK CONTAINER */
+.loading-nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 22px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+/* 2. THE SVG CANVAS OVERLAY */
+.border-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to go right through to the link text */
+}
+
+/* 3. THE RECTANGLE BORDER PROFILE */
+.border-rect {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: rgba(65, 109, 163, 0.8); /* Your loading line color */
+    stroke-width: 2px;
+    
+    /* The trick: Setting up a massive line dash pattern */
+    stroke-dasharray: 400; 
+    stroke-dashoffset: 400; /* Pushes the entire border out of sight by default */
+    
+    /* This creates the smooth, slow loading bar crawl effect */
+    transition: stroke-dashoffset 0.8s linear; 
+}
+
+/* 4. THE HOVER STATE: The perimeter slowly fills up */
+.loading-nav-link:hover .border-rect {
+    stroke-dashoffset: 0; /* Brings the outline tracing back into view */
+}
+
+/* Optional soft background glow while hovering */
+.loading-nav-link:hover {
+    color: #ffffff;
+    background-color: rgb(28, 48, 71);
+    border-radius: 20px;
+    transition: background-color 0.4s ease;
+}
+
+/* 5. THE ACTIVE CLICK STATE */
+.loading-nav-link:active {
+    transform: scale(0.95);
+    transition: transform 0.05s ease;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    min-height: 80vh;        /* Keeps it centered on the page */
+    padding: 20px;
+}
+
+.contact-card {
+    text-align: center;      /* Matches your sketch's alignment */
+    max-width: 400px;
+    width: 100%;
+}
+
+
+
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+    color: #c4e1ff; /* Using your accent blue */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-details p, .social-links a {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.contact-in-a-row {
+    display: flex;             /* This aligns items in a row */
+    justify-content: center;   /* Centers the row itself */
+    gap: 30px;                 /* Adds breathing room between the two items */
+    margin: 20px 0;
+}
+
+/* Optional: Ensure the paragraph tags don't add extra vertical spacing */
+.contact-row-inline p {
+    margin: 0;
+}

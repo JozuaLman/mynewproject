@@ -12,11 +12,34 @@
         <span class="name"><h1>Portfolio</h1></span>
     </div> 
     <nav class="links-of-me">
-        <a href="home.html">home</a>
-        <a href="about_me.html">About me</a>
-        <a href="work.html">work</a>
-        <a href="contact">contact</a>
-    </nav>
+    <a href="home.html" class="loading-nav-link">
+        <span>home</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+
+    <a href="about_me.html" class="loading-nav-link">
+        <span>About me</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+
+    <a href="work.html" class="loading-nav-link">
+        <span>work</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+
+    <a href="contact.html" class="loading-nav-link">
+        <span>contact</span>
+        <svg class="border-svg" width="100%" height="100%">
+            <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
+        </svg>
+    </a>
+</nav>
     </header>
     
     <section class="scroll-track">
@@ -24,7 +47,7 @@
 
     <div class="scene active" id="scene-intro">
       <div class="intro-text">
-          <img src="photo of me.jpeg" class="profile-image" alt="me">
+          <img src="../images/photo of me.jpeg" class="profile-image" alt="me">
           <h1>Hi there, I'm Jozua Lachman </h1>
           <p>I'm an aspiring Data Analyst & BI Student and passionate about Graphic design or anything to do with art.</p>
       </div>
@@ -57,17 +80,7 @@
    
    
 
-    <!--the wavy line-->
-    <svg class="wavy-line" viewBox="0 0 500 1000" preserveAspectRatio="none">
-        <path
-        d="M200,-50 
-       C500,200 -100,400 200,500 
-       S500,800 200,1050" 
-    fill="none" 
-    stroke="#800020" 
-    stroke-width="85" 
-    stroke-linecap="round" />
-    </svg>
+    
 
     <script src="script.js"></script>
 </body>
