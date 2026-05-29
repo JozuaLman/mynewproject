@@ -1,5 +1,5 @@
  body{  background-color: #0a0a0a;
-            background-image: url('../images/the-new-bg.jpg');
+            background-image: url('../img/the-new-bg.jpg');
             background-repeat:no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -25,7 +25,7 @@
     -webkit-backdrop-filter: blur(12px);
 }
 
-  /* 1. THE LINK CONTAINER */
+  /* THE LINK CONTAINER */
 .loading-nav-link {
     position: relative;
     display: inline-block;
@@ -38,38 +38,37 @@
     transition: color 0.3s ease;
 }
 
-/* 2. THE SVG CANVAS OVERLAY */
+/*  THE SVG CANVAS OVERLAY */
 .border-svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Allows clicks to go right through to the link text */
+    pointer-events: none; 
 }
 
-/* 3. THE RECTANGLE BORDER PROFILE */
+/*  THE RECTANGLE BORDER PROFILE */
 .border-rect {
     width: 100%;
     height: 100%;
     fill: transparent;
-    stroke: rgba(65, 109, 163, 0.8); /* Your loading line color */
+    stroke: rgba(65, 109, 163, 0.8);
     stroke-width: 2px;
     
-    /* The trick: Setting up a massive line dash pattern */
-    stroke-dasharray: 400; 
-    stroke-dashoffset: 400; /* Pushes the entire border out of sight by default */
     
-    /* This creates the smooth, slow loading bar crawl effect */
+    stroke-dasharray: 400; 
+    stroke-dashoffset: 400; 
+    
+    
     transition: stroke-dashoffset 0.8s linear; 
 }
 
-/* 4. THE HOVER STATE: The perimeter slowly fills up */
+/*  THE HOVER STATE: The perimeter slowly fills up */
 .loading-nav-link:hover .border-rect {
-    stroke-dashoffset: 0; /* Brings the outline tracing back into view */
-}
+    stroke-dashoffset: 0;}
 
-/* Optional soft background glow while hovering */
+
 .loading-nav-link:hover {
     color: #ffffff;
     background-color: rgb(28, 48, 71);
@@ -77,7 +76,7 @@
     transition: background-color 0.4s ease;
 }
 
-/* 5. THE ACTIVE CLICK STATE */
+/*  THE ACTIVE CLICK STATE */
 .loading-nav-link:active {
     transform: scale(0.95);
     transition: transform 0.05s ease;
@@ -85,14 +84,14 @@
 
 .contact-section {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    min-height: 80vh;        /* Keeps it centered on the page */
+    justify-content: center; 
+    align-items: center;     
+    min-height: 80vh;        
     padding: 20px;
 }
 
 .contact-card {
-    text-align: center;      /* Matches your sketch's alignment */
+    text-align: center;      
     max-width: 400px;
     width: 100%;
 }
@@ -103,7 +102,7 @@
 .contact-card h3 {
     font-size: 1.2rem;
     margin: 20px 0 10px 0;
-    color: #c4e1ff; /* Using your accent blue */
+    color: #c4e1ff; 
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -120,21 +119,21 @@
     text-decoration: underline;
 }
 .contact-in-a-row {
-    display: flex;             /* This aligns items in a row */
-    justify-content: center;   /* Centers the row itself */
-    gap: 30px;                 /* Adds breathing room between the two items */
+    display: flex;             
+    justify-content: center;   
+    gap: 30px;                 
     margin: 20px 0;
 }
 
-/* Optional: Ensure the paragraph tags don't add extra vertical spacing */
+
 .contact-row-inline p {
     margin: 0;
 }
 
 .contact-item {
-    display: flex;       /* Aligns icon and text side-by-side */
-    align-items: center; /* Keeps them vertically centered */
-    gap: 10px;           /* Adds space between the icon and the text */
+    display: flex;       
+    align-items: center; 
+    gap: 10px;           
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -142,9 +141,9 @@
 }
 
 .contact-item i {
-    color: #a9cfff;      /* Use your blue accent color */
+    color: #a9cfff;      
     font-size: 2rem; 
-    margin-right: 15px /* Adjust size to match your text */
+    margin-right: 15px 
 }
 
 @media (max-width: 600px) {
@@ -155,7 +154,6 @@
 }
 
 @media (max-width: 600px) {
-  /* Replace .navbar with your actual nav class/ID name */
   .links-of-me { 
     flex-direction: column;
     align-items: flex-start;

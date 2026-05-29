@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jozua's portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/work.css">
 </head>
 <body>
@@ -44,7 +45,7 @@
 
    <main class="work-container">
         
-        <!--  ROW 1: VOLUNTEER FOR RECYCLING-->
+        <!--  VOLUNTEER FOR RECYCLING-->
         <section class="work-row">
             <div class="project-info">
                 <h2>Volunteer for recycling org</h2>
@@ -53,12 +54,12 @@
                 </p>
             </div>
             <div class="project-media grid-two-columns">
-                <div class="media-box"><img src="images/photo-of-me-with-trashbag.jpeg" alt="Photo of the group"></div>
+                <div class="media-box"><img src="img/photo-of-me-with-trashbag.jpeg" alt="Photo of me at work"></div>
             
             </div>
         </section>
 
-        <!--ROW 2: GRAPHIC DESIGN (With Carousel)-->
+        <!-- GRAPHIC DESIGN (With Carousel)-->
         <section class="work-row">
             <div class="project-info">
                 <h2>Graphic design</h2>
@@ -67,21 +68,21 @@
                 </p>
                 <!-- design sub-filters -->
                 <div class="work-filters">
-                   <button class="filter-btn active" onclick="filterDesign('design-posters', this)">Posters</button>
-    <button class="filter-btn" onclick="filterDesign('design-cards', this)">Business cards</button>
-    <button class="filter-btn" onclick="filterDesign('design-others', this)">Others</button>
+                   <button class="filter-btn active" data-filter="design-posters">Posters</button>
+<button class="filter-btn" data-filter="design-cards">Business cards</button>
+<button class="filter-btn" data-filter="design-others">others</button>
 </div>
             </div>
             
             <!-- Horizontal Carousel Window -->
             <div class="project-media carousel-container">
-            <button class="carousel-arrow left-arrow" onclick="moveSlide(-1)">‹</button>
+            <button class="carousel-arrow left-arrow" data-dir="-1"><</button>
             
             <div class="carousel-track-wrapper">
                 <div id="carousel-track" class="carousel-track">
-                    <img src="images/aura-farmer-dim.png" alt="Poster project" class="carousel-img">
-                    <img src="images/re-re-unbothered.png" alt="Poster project" class="carousel-img">
-                    <img src="images/this-is-gonna-hurt-tomorrow.png" alt="Poster project" class="carousel-img">
+                    <img src="img/aura-farmer-dim.png" alt="Poster project" class="carousel-img">
+                    <img src="img/re-re-unbothered.png" alt="Poster project" class="carousel-img">
+                    <img src="img/this-is-gonna-hurt-tomorrow.png" alt="Poster project" class="carousel-img">
                 </div>
 
                 <div id="carousel-placeholder" class="placeholder-content" "placeholder-content-hidden"> <!--  style="display: none;"--> 
@@ -92,7 +93,7 @@
                 </div>
             </div>
 
-            <button class="carousel-arrow right-arrow" onclick="moveSlide(1)">›</button>
+            <button class="carousel-arrow right-arrow" data-dir="1">></button>
         </div>
 
         <!--ROW 3: MSSG PROJECT -->
@@ -109,7 +110,7 @@
             </div>
             
             <div class="project-media">
-                <div class="media-box"><img src="images/me-during-prototyping-fair.jpeg" alt="Picture of us presenting our prototype"></div>
+                <div class="media-box"><img src="img/me-during-prototyping-fair.jpeg" alt="Picture of us presenting our prototype"></div>
                
             </div>
         </section>

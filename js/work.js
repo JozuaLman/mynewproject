@@ -59,3 +59,24 @@ function moveSlide(direction) {
     // Physically shift the images along the X-axis line layout track
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Handle Portfolio Filters
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterCategory = button.getAttribute('data-filter');
+            // Passes the category. Your function uses 'this', so we pass the button element too if needed!
+            filterDesign(filterCategory, button); 
+        });
+    });
+
+    // 2. Handle Carousel Arrows
+    const carouselArrows = document.querySelectorAll('.carousel-arrow');
+    carouselArrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
+            const direction = parseInt(arrow.getAttribute('data-dir'));
+            moveSlide(direction); // Calls your existing function cleanly!
+        });
+    });
+});

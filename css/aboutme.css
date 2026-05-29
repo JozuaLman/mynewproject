@@ -1,5 +1,5 @@
  body{  background-color: #0a0a0a;
-            background-image:url('../images/the-new-bg.jpg');
+            background-image:url('../img/the-new-bg.jpg');
             background-repeat:no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -50,10 +50,8 @@
     justify-content: space-around;
     align-items: center;
     
-    /* ADD THIS LINE */
     padding-top: 140px; 
     
-    /* These keep the side spacing consistent */
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
@@ -65,21 +63,21 @@
 
 .about-text {
     display: flex;
-    flex-direction: column; /* Stacks your title and paragraph */
+    flex-direction: column;
     max-width: 500px;
-    text-align: left; /* Keeps the text aligned like a book */
+    text-align: left; 
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 .about-photo img {
-    width: 400px; /* Adjust based on your sketch's rectangle */
+    width: 400px; 
     height: auto;
-    border-radius: 10px; /* Optional: adds a nice soft corner */
+    border-radius: 10px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-  /* 1. THE LINK CONTAINER */
+  /*  THE LINK CONTAINER */
 .loading-nav-link {
     position: relative;
     display: inline-block;
@@ -92,38 +90,37 @@
     transition: color 0.3s ease;
 }
 
-/* 2. THE SVG CANVAS OVERLAY */
+/*  THE SVG CANVAS OVERLAY */
 .border-svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Allows clicks to go right through to the link text */
+    pointer-events: none; 
 }
 
-/* 3. THE RECTANGLE BORDER PROFILE */
+/*  THE RECTANGLE BORDER PROFILE */
 .border-rect {
     width: 100%;
     height: 100%;
     fill: transparent;
-    stroke: rgba(65, 109, 163, 0.8); /* Your loading line color */
+    stroke: rgba(65, 109, 163, 0.8);
     stroke-width: 2px;
     
-    /* The trick: Setting up a massive line dash pattern */
-    stroke-dasharray: 400; 
-    stroke-dashoffset: 400; /* Pushes the entire border out of sight by default */
     
-    /* This creates the smooth, slow loading bar crawl effect */
+    stroke-dasharray: 400; 
+    stroke-dashoffset: 400; 
+    
+    
     transition: stroke-dashoffset 0.8s linear; 
 }
 
-/* 4. THE HOVER STATE: The perimeter slowly fills up */
+/*  THE HOVER STATE: The perimeter slowly fills up */
 .loading-nav-link:hover .border-rect {
-    stroke-dashoffset: 0; /* Brings the outline tracing back into view */
+    stroke-dashoffset: 0; 
 }
 
-/* Optional soft background glow while hovering */
 .loading-nav-link:hover {
     color: #ffffff;
     background-color: rgb(28, 48, 71);
@@ -131,26 +128,25 @@
     transition: background-color 0.4s ease;
 }
 
-/* 5. THE ACTIVE CLICK STATE */
+/*  THE ACTIVE CLICK STATE */
 .loading-nav-link:active {
     transform: scale(0.95);
     transition: transform 0.05s ease;
 }
 
-/* ==========================================================================
+/*
    1. ABOUT ME LAYOUT CONTAINER
-   ========================================================================== */
+   */
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
-   padding: 140px 40px 40px 40px; /* 120px top padding keeps it safely below your fixed header */
+   padding: 140px 40px 40px 40px;
     font-family: Arial, sans-serif;
     color: #ffffff;
     display: flex;
     flex-direction: column;
 }
 
-/* Sub-Navigation Tabs */
 .about-tabs {
     display: flex;
     flex-direction: row;
@@ -178,22 +174,22 @@
     color: #ffffff;
 }
 
-/* The active sub-menu link gets a solid underline */
+
 .tab-btn.active {
     color: #ffffff;
-    border-bottom: 2px solid #3d6395; /* Matches your header's cool blue accent color */
+    border-bottom: 2px solid #3d6395; 
 }
 
-/* ==========================================================================
+/* 
    2. TAB SHOW/HIDE LOGIC (Controlled by JavaScript)
-   ========================================================================== */
+   */
 .tab-content {
-    display: none; /* Hides all tabs by default */
+    display: none; 
     animation: fadeIn 0.4s ease forwards;
 }
 
 .tab-content.active-content {
-    display: block; /* Only shows the tab with this class */
+    display: block; 
 }
 
 @keyframes fadeIn {
@@ -201,9 +197,9 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==========================================================================
+/* 
    3. SPECIFIC TAB LAYOUTS (Matching Your Sketches)
-   ========================================================================== */
+    */
 
 /* TAB 1: EDUCATION LAYOUT (Text left, Certificates right) */
 .education-layout {
@@ -220,7 +216,7 @@
     padding: 25px;
 }
 
-/* Custom Scrollbar for your certificates list box */
+/* Custom Scrollbar for certificates list box */
 .scrollable-list {
     max-height: 200px;
     overflow-y: auto;
@@ -244,7 +240,7 @@
 }
 
 .skill-column {
-    background-color: rgba(61, 99, 149, 0.02); /* Soft hint of your header blue */
+    background-color: rgba(61, 99, 149, 0.02); 
     border:1px solid rgba(255, 255, 255, 0.05);
     border-left: 4px solid #3d6395;
     padding: 30px;
@@ -284,7 +280,7 @@
 }
 
 @media (max-width: 600px) {
-  /* Replace .navbar with your actual nav class/ID name */
+ 
   .links-of-me { 
     flex-direction: column;
     align-items: flex-start;

@@ -15,3 +15,15 @@ function openTab(tabName) {
     document.getElementById(tabName).classList.add("active-content");
     event.currentTarget.classList.add("active");
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all your tab buttons
+    const tabButtons = document.querySelectorAll('.tab-btn');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-target');
+            openTab(targetTab); // Calls your existing function cleanly!
+        });
+    });
+});
