@@ -304,6 +304,10 @@
     animation: cardFade 0.4s ease forwards; /* Quick, clean fade-in effect */
 }
 
+.placeholder-content-hidden {
+    display: none;
+}
+
 .placeholder-text h3 {
     text-transform: lowercase;
     color: #3d6395; /* Matches your signature accent blue */
