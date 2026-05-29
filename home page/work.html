@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work</title>
+    <title>Jozua's portfolio</title>
     <link rel="stylesheet" href="work.css"
 </head>
 <body>
@@ -12,8 +12,8 @@
         <span class="name"><h1>Work</h1></span>
     </div> 
     <nav class="links-of-me">
-    <a href="home.html" class="loading-nav-link">
-        <span>home</span>
+    <a href="main.html" class="loading-nav-link">
+        <span>Home</span>
         <svg class="border-svg" width="100%" height="100%">
             <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
         </svg>
@@ -27,14 +27,14 @@
     </a>
 
     <a href="work.html" class="loading-nav-link">
-        <span>work</span>
+        <span>Work</span>
         <svg class="border-svg" width="100%" height="100%">
             <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
         </svg>
     </a>
 
     <a href="contact.html" class="loading-nav-link">
-        <span>contact</span>
+        <span>Contact</span>
         <svg class="border-svg" width="100%" height="100%">
             <rect class="border-rect" x="0" y="0" width="100%" height="100%" rx="20" ry="20"></rect>
         </svg>
@@ -44,36 +44,32 @@
 
    <main class="work-container">
         
-        <!-- ====================================================
-             ROW 1: VOLUNTEER FOR RECYCLING
-             ==================================================== -->
+        <!--  ROW 1: VOLUNTEER FOR RECYCLING-->
         <section class="work-row">
             <div class="project-info">
-                <h2>volunteer for recycling org</h2>
+                <h2>Volunteer for recycling org</h2>
                 <p>
                     In the photo on the right you can see me with a big bag on my back. This was me doing volunteer work for Up2you foundation, picking up waste and recycling at a big beach party.
                 </p>
             </div>
             <div class="project-media grid-two-columns">
-                <div class="media-box"><img src="../images/pictures (7).jpeg" alt="Photo of the group"></div>
+                <div class="media-box"><img src="../images/photo of me with the trashbag.jpeg" alt="Photo of the group"></div>
             
             </div>
         </section>
 
-        <!-- ====================================================
-             ROW 2: GRAPHIC DESIGN (With Carousel)
-             ==================================================== -->
+        <!--ROW 2: GRAPHIC DESIGN (With Carousel)-->
         <section class="work-row">
             <div class="project-info">
-                <h2>graphic design</h2>
+                <h2>Graphic design</h2>
                 <p>
                     To make these posters i used the free and alternative to Adobe: Affinity 3. This software is a combination and alternative to multiple Adobe applications like Lightroom, Photoshop and Illustrator.  
                 </p>
-                <!-- Your design sub-filters from the sketch -->
+                <!-- design sub-filters -->
                 <div class="work-filters">
-                   <button class="filter-btn active" onclick="filterDesign('design-posters', this)">posters</button>
-    <button class="filter-btn" onclick="filterDesign('design-cards', this)">business cards</button>
-    <button class="filter-btn" onclick="filterDesign('design-others', this)">others</button>
+                   <button class="filter-btn active" onclick="filterDesign('design-posters', this)">Posters</button>
+    <button class="filter-btn" onclick="filterDesign('design-cards', this)">Business cards</button>
+    <button class="filter-btn" onclick="filterDesign('design-others', this)">Others</button>
 </div>
             </div>
             
@@ -83,15 +79,15 @@
             
             <div class="carousel-track-wrapper">
                 <div id="carousel-track" class="carousel-track">
-                    <img src="../images/pictures (7).jpeg" alt="Poster project" class="carousel-img">
-                    <img src="../images/pictures (7).jpeg" alt="Poster project" class="carousel-img">
-                    <img src="../images/pictures (7).jpeg" alt="Poster project" class="carousel-img">
+                    <img src="../images/aura farmer dim.png" alt="Poster project" class="carousel-img">
+                    <img src="../images/re-re- unbothered.png" alt="Poster project" class="carousel-img">
+                    <img src="../images/this is gonna hurt tomorrow.png" alt="Poster project" class="carousel-img">
                 </div>
 
                 <div id="carousel-placeholder" class="placeholder-content" style="display: none;">
                     <div class="placeholder-text">
-                        <h3 id="placeholder-title">business cards</h3>
-                        <p>project archiving in progress — coming soon</p>
+                        <h3 id="placeholder-title">Business cards</h3>
+                        <p>Project archiving in progress — coming soon</p>
                     </div>
                 </div>
             </div>
@@ -99,9 +95,7 @@
             <button class="carousel-arrow right-arrow" onclick="moveSlide(1)">›</button>
         </div>
 
-        <!-- ====================================================
-             ROW 3: MSSG PROJECT
-             ==================================================== -->
+        <!--ROW 3: MSSG PROJECT -->
         <section class="work-row">
             <div class="project-info">
                 <h2>Projects</h2>
@@ -115,7 +109,7 @@
             </div>
             
             <div class="project-media">
-                <div class="media-box"><img src="../images/pictures (7).jpeg" alt="Picture of us presenting our prototype"></div>
+                <div class="media-box"><img src="../images/me during prototyping fair.jpeg" alt="Picture of us presenting our prototype"></div>
                
             </div>
         </section>
@@ -125,17 +119,7 @@
     
     <script src="work.js"></script>
     
-     <!--the wavy line-->
-    <!--<svg class="wavy-line" viewBox="0 0 500 1000" preserveAspectRatio="none">
-        <path
-        d="M200,-50 
-       C500,200 -100,400 200,500 
-       S500,800 200,1050" 
-    fill="none" 
-    stroke="#721d1b" 
-    stroke-width="85" 
-    stroke-linecap="round" />
-    </svg>-->
+     
     
 </body>
 </html>
