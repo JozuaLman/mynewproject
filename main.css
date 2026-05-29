@@ -281,3 +281,18 @@
     transform: scale(0.95);
     transition: transform 0.05s ease;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Replace .navbar with your actual nav class/ID name */
+  .links-of-me { 
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
